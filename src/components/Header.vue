@@ -1,5 +1,5 @@
 <template>
-    <Menu mode="horizontal" theme="dark" active-name="home" @on-select="hahahha">
+    <Menu mode="horizontal" theme="dark" active-name="home" @on-select="router">
         <div class="layout-logo icon">
             <img id="icon_pizza" src="../assets/icon_pizza.png" alt="披萨图标"/>
         </div>
@@ -40,13 +40,12 @@
     export default {
         name: "Header",
         methods: {
-            hahahha: function (name) {
+            router: function (name) {
                 if (name=='home') {
                     this.$router.push('/');
                 }else {
                     this.$router.push(name);
                 }
-
             }
         }
     }

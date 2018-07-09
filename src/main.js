@@ -30,6 +30,17 @@ const router = new VueRouter({
     mode:'history'
 })
 
+// 全局守卫
+router.beforeEach((to,from,next) => {
+    if (to.path == '/login' || to.path == '/register'){
+        next();
+    } else {
+        alert('还没有登录，请先登录!');
+        next('/login');
+    }
+})
+
+
 new Vue({
     router,
   render: h => h(App)

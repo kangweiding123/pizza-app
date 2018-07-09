@@ -4,13 +4,13 @@
           <Header>
               <appHeader></appHeader>
           </Header>
-          <Content :style="{padding: '0 50px'}">
-              <Card>
-                  <div style="min-height: 200px;">
-                      <router-view></router-view>
-                  </div>
-              </Card>
-          </Content>
+          <Layout :style="{padding: '0 50px'}">
+              <Breadcrumb :style="{margin: '16px 0'}">
+              </Breadcrumb>
+              <Content :style="{padding: '24px 0', minHeight: '280px', background: '#fff'}">
+                     <router-view></router-view>
+              </Content>
+          </Layout>
           <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
       </Layout>
   </div>
@@ -52,9 +52,6 @@ export default {
     }
     .layout-footer-center{
         text-align: center;
-    }
-    .ivu-layout-content{
-        margin-top: 50px;
     }
     .ivu-card.ivu-card-bordered{
         height: 500px;
